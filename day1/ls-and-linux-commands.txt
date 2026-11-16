@@ -1,0 +1,96 @@
+DAY 1 - LINUX COMMANDS AND CHEATSHEET
+==NAVIGATION==
+pws - present working dir
+cd /var/log - go to folder
+cd ~ - go to home folder
+cd .. - go up one level
+ls /etc - list a folder without moving there
+
+== ls FORMS ==
+ls -  list names only,hidden files not shown
+ls -l - long format : permisssions ,owner,group,size,date,name
+ls -a - includes hidden files,plus . and ..
+ls -A - hidden files wihtout . and ..
+ls -la - long format plus hidden files(most used)
+ls -lh - long format with readable sizes
+ls -lah - long,hidden,readable sizes
+ls -d */ - list only dir
+ls -F - mark types : / folder , * executable, @ link
+ls -1 - one name per line
+ls - R - recursive,include subfolders
+ls -lt - sort by modfied time,newest first
+ls -ltr - oldest first ,newest at bottom
+ls -lS - sort by size,biggest first
+ls -lSr - smallest first
+ls -r - reverse the roder
+ls -X - sort by extension
+ls -i - show inode numbers
+ls -n - show numeric user and group Id
+ls -s - show blocks used
+ls -lu - show last access time
+ls --full-time - full timestamp with seconds
+ls -ld /var/log - details of folder itself ,not its contents
+ls *.log - only names ending with .log
+==DISK==
+df -h - disk sapce per filesystem,readable sizes
+du -sh * - size of each item in this folder
+du : Permissions denied means you need sudo to read that folder
+==PERMISSIONS==
+Read = 4
+Write = 2
+Execute =1
+cat > ls-and-linux-commands.txt << "EOF"
+DAY 1 - LINUX COMMANDS AND CHEATSHEET
+==NAVIGATION==
+pws - present working dir
+cd /var/log - go to folder
+cd ~ - go to home folder
+cd .. - go up one level
+ls /etc - list a folder without moving there
+
+== ls FORMS ==
+ls -  list names only,hidden files not shown
+ls -l - long format : permisssions ,owner,group,size,date,name
+ls -a - includes hidden files,plus . and ..
+ls -A - hidden files wihtout . and ..
+ls -la - long format plus hidden files(most used)
+ls -lh - long format with readable sizes
+ls -lah - long,hidden,readable sizes
+ls -d */ - list only dir
+ls -F - mark types : / folder , * executable, @ link
+ls -1 - one name per line
+ls - R - recursive,include subfolders
+ls -lt - sort by modfied time,newest first
+ls -ltr - oldest first ,newest at bottom
+ls -lS - sort by size,biggest first
+ls -lSr - smallest first
+ls -r - reverse the roder
+ls -X - sort by extension
+ls -i - show inode numbers
+ls -n - show numeric user and group Id
+ls -s - show blocks used
+ls -lu - show last access time
+ls --full-time - full timestamp with seconds
+ls -ld /var/log - details of folder itself ,not its contents
+ls *.log - only names ending with .log
+==DISK==
+df -h - disk sapce per filesystem,readable sizes
+du -sh * - size of each item in this folder
+du : Permissions denied means you need sudo to read that folder
+==PERMISSIONS==
+Read = 4
+Write = 2
+Execute =1
+
+Order : owner , groups ,others
+-rw-r----- = 640
+drwxr-xr-x = 755
+chmod 750 a.sh - owner rwx,group r-x,others none
+chmod 644 a.sh  - owner rw-,group r--,others r--
+chmod u+x a.sh - add execute for owner
+touch a.sh - create an empty file
+Permission denied on touch in /var/log : only root can write there
+==NOTES FROM MISTAKES ==
+Typing /etc just gies its a directory
+chmod need a mode and a real filename
+/mnt/c was 98% full : free space before docker days
