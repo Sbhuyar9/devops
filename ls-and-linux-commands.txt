@@ -1,0 +1,10 @@
+
+== PROCESSES ==
+ps aux, top, kill -15 PID, kill -9 PID, pkill name, ss -tulpn, lsof -i :8080
+
+== TEXT TOOLS ==
+grep (-i -v -c -r -n), awk '{print $1}', sed 's/a/b/', sort, uniq -c, cut, find, head, tail, wc -l
+
+== SYSTEMD ==
+systemctl status|start|stop|restart|enable|disable NAME
+journalctl -u NAME -n 50, journalctl -f
