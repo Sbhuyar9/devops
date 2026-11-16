@@ -94,3 +94,9 @@ Permission denied on touch in /var/log : only root can write there
 Typing /etc just gies its a directory
 chmod need a mode and a real filename
 /mnt/c was 98% full : free space before docker days
+
+== GIT LAB 2 ==
+git bisect start / bad / good HEAD~N / run ./check.sh / reset
+merge conflict: markers <<<<<<< ======= >>>>>>>, edit, git add, git commit --no-edit, git merge --abort
+git revert HASH  = new commit that undoes one (safe on shared branches)
+git reset --hard = moves the branch back (rewrites history, local only)
