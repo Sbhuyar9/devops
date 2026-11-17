@@ -1,0 +1,8 @@
+NGINX REVERSE PROXY LAB
+curl -> nginx:9000 -> upstream 8001, 8002 (round-robin by default)
+nginx -t (test) then systemctl reload nginx
+Errors: 502 = backend down/bad answer, 504 = backend too slow (proxy_read_timeout)
+curl refused on proxy port = nginx down
+Logs: /var/log/nginx/access.log and error.log, journalctl -u nginx
+Passive failover: nginx skips a failed backend
+weight=2 sends double traffic
